@@ -1,0 +1,32 @@
+{
+  "name": "@vimeo/babel-plugin-transform-i18n",
+  "version": "1.0.0",
+  "description": "A Babel transform plugin to replace strings with their translations.",
+  "license": "MIT",
+  "author": "Brad Dougherty <brad@vimeo.com>",
+  "contributors": [
+    "Brad Dougherty <brad@vimeo.com> (https://brad.is)"
+  ],
+  "main": "index.js",
+  "repository": "vimeo/babel-plugin-transform-i18n",
+  "bugs": "https://github.com/vimeo/babel-plugin-transform-i18n/issues",
+  "keywords": [
+    "babel",
+    "babel-plugin",
+    "i18n"
+  ],
+  "scripts": {
+    "lint": "eslint index.js test.js",
+    "pretest": "npm run lint",
+    "test": "nyc --cache --reporter=text --reporter=html ava",
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+  },
+  "devDependencies": {
+    "@vimeo/eslint-config-player": "^4.0.1",
+    "ava": "^0.16.0",
+    "babel-core": "^6.13.2",
+    "codecov": "^1.0.1",
+    "eslint": "^3.2.2",
+    "nyc": "^7.1.0"
+  }
+}

@@ -1,0 +1,1 @@
+var hello = 'Brad, welcome!';
