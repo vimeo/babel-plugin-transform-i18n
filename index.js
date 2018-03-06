@@ -14,7 +14,12 @@ module.exports = function({ types: t }) {
                 const dictionary = state.opts.dictionary || {};
 
                 if (t.isIdentifier(path.node.callee) && path.node.callee.name === translationFunctionName) {
-                    let string = path.node.arguments[0].extra.rawValue;
+                    const firstArgument = path.node.arguments[0];
+                    if (!firstArgument || !firstArgument.extra) {
+                        return;
+                    }
+
+                    let string = firstArgument.extra.rawValue;
 
                     if (dictionary[string]) {
                         string = dictionary[string];
