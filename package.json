@@ -1,6 +1,6 @@
 {
   "name": "@vimeo/babel-plugin-transform-i18n",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Babel transform plugin to replace strings with their translations.",
   "license": "MIT",
   "author": "Brad Dougherty <brad@vimeo.com>",
